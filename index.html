@@ -893,7 +893,7 @@
           <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Link para clientes</div>
           <div style="font-size:12px;color:var(--text)">Compartí este link para que tus clientes agenden su turno</div>
         </div>
-        <div class="link-share-url" id="public-link-url">inkstudio.com.ar/agendar</div>
+        <div class="link-share-url" id="public-link-url">https://julian-kiodo-tattoo.vercel.app/tattoo-studio-booking.html</div>
         <button class="btn btn-gold" onclick="copyLink()">📋 Copiar</button>
         <button class="btn btn-outline" onclick="openModal('modal-preview')">👁 Preview</button>
       </div>
@@ -1654,10 +1654,10 @@
 <div class="modal-overlay" id="modal-preview">
   <div class="modal" style="width:660px;max-width:95vw">
     <div class="modal-header"><span class="modal-title">PREVIEW — FORM DE CLIENTE</span><button class="modal-close" onclick="closeModal('modal-preview')">×</button></div>
-    <div style="padding:0"><div id="public-preview-wrap"><iframe id="preview-iframe" src="about:blank"></iframe></div></div>
+    <div style="padding:0"><div id="public-preview-wrap"><iframe id="preview-iframe" src="https://julian-kiodo-tattoo.vercel.app/tattoo-studio-booking.html"></iframe></div></div>
     <div class="modal-footer">
       <button class="btn btn-outline" onclick="closeModal('modal-preview')">Cerrar</button>
-      <button class="btn btn-gold" onclick="window.open('tattoo-studio-booking.html','_blank')">Abrir en nueva pestaña ↗</button>
+      <button class="btn btn-gold" onclick="window.open('https://julian-kiodo-tattoo.vercel.app/tattoo-studio-booking.html','_blank')">Abrir en nueva pestaña ↗</button>
     </div>
   </div>
 </div>
@@ -2021,22 +2021,7 @@
     renderCalendar();
   }
 
-  // Preview modal
-  document.addEventListener('click', function(e){
-    if(e.target.textContent==='👁 Preview'){
-      setTimeout(()=>{
-        const iframe=document.getElementById('preview-iframe');
-        if(iframe){
-          try{
-            const doc=iframe.contentDocument||iframe.contentWindow.document;
-            doc.open();
-            doc.write('<html><body style="margin:0;font-family:sans-serif;padding:20px;background:#F5F1EA;color:#2E2620"><h2 style=\'font-size:32px;letter-spacing:4px;font-family:serif\'>INK STUDIO</h2><p style=\'margin-top:8px;color:#8A7E6E\'>Formulario público — abrí en nueva pestaña para la versión completa</p><div style=\'margin-top:20px;padding:16px;background:#fff;border-radius:8px;border:1px solid #D4C9B5\'><p><strong>→ Paso 1:</strong> Elegí el estilo (Blackwork, Floral, Geométrico, Lettering...)</p><p style=\'margin-top:8px\'><strong>→ Paso 2:</strong> Zona del cuerpo + Tamaño</p><p style=\'margin-top:8px\'><strong>→ Paso 3:</strong> Imagen de referencia</p><p style=\'margin-top:8px\'><strong>→ Paso 4:</strong> Selección de fecha y horario en el calendario</p><p style=\'margin-top:8px\'><strong>→ Paso 5:</strong> Datos personales y envío</p></div></body></html>');
-            doc.close();
-          }catch(err){}
-        }
-      },80);
-    }
-  });
+
 </script>
 </body>
 </html>
