@@ -893,7 +893,7 @@
           <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px">Link para clientes</div>
           <div style="font-size:12px;color:var(--text)">Compartí este link para que tus clientes agenden su turno</div>
         </div>
-        <div class="link-share-url" id="public-link-url">https://julian-kiodo-tattoo.vercel.app/tattoo-studio-booking.html</div>
+        <div class="link-share-url" id="public-link-url">https://julian-kiodo-tattoo.vercel.app/calendario.html</div>
         <button class="btn btn-gold" onclick="copyLink()">📋 Copiar</button>
         <button class="btn btn-outline" onclick="openModal('modal-preview')">👁 Preview</button>
       </div>
@@ -905,132 +905,7 @@
         <div style="margin-left:auto;font-size:12px;color:var(--muted)">Última actualización: hace 2 minutos</div>
       </div>
       <div id="solicitudes-list">
-        <div class="solicitud-card nueva" data-estado="nueva">
-          <div class="sol-header" onclick="toggleSol(this)">
-            <div class="client-avatar" style="width:36px;height:36px;font-size:14px;flex-shrink:0">A</div>
-            <div style="flex:1"><div style="font-weight:600;font-size:14px">Ana González</div><div style="font-size:11px;color:var(--muted)">Floral / Acuarela · Antebrazo derecho · Hace 2 horas</div></div>
-            <span class="tag tag-gold">Nueva</span><span style="color:var(--muted);font-size:18px;margin-left:8px">▾</span>
-          </div>
-          <div class="sol-body">
-            <div class="sol-grid">
-              <div class="sol-field"><label>Nombre</label><span>Ana González</span></div>
-              <div class="sol-field"><label>Teléfono</label><span>11 4423-9801</span></div>
-              <div class="sol-field"><label>Email</label><span>ana.g@mail.com</span></div>
-              <div class="sol-field"><label>Estilo</label><span>Floral / Acuarela</span></div>
-              <div class="sol-field"><label>Zona</label><span>Antebrazo derecho</span></div>
-              <div class="sol-field"><label>Tamaño</label><span>Mediano (5–15 cm)</span></div>
-              <div class="sol-field"><label>Color</label><span>Color</span></div>
-              <div class="sol-field"><label>Primera vez</label><span>Sí</span></div>
-              <div class="sol-field"><label>Disponibilidad</label><span>Tardes, cualquier día</span></div>
-            </div>
-            <div class="sol-field" style="margin-bottom:14px"><label>Descripción de la idea</label><span style="display:block;margin-top:5px;line-height:1.7;color:var(--text)">Quiero un ramo de flores silvestres, principalmente lavanda y anémonas. Algo delicado, con líneas finas y colores suaves. No muy oscuro, que se vea aéreo.</span></div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px">
-              <div><div class="appt-form-label" style="margin-bottom:6px">Imagen de referencia</div><div style="background:var(--panel);border:1px solid var(--border);border-radius:4px;height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px"><span style="font-size:28px">🌸</span><span style="font-size:11px;color:var(--muted)">floral-ref-ana.jpg</span><button class="btn btn-outline" style="font-size:10px;padding:3px 10px;margin-top:4px">Ver imagen</button></div></div>
-              <div><div class="appt-form-label" style="margin-bottom:6px">Zona seleccionada</div><div style="background:var(--panel);border:1px solid var(--border);border-radius:4px;height:120px;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted)">Antebrazo derecho</div></div>
-            </div>
-            <div class="sol-actions">
-              <button class="btn btn-green" onclick="confirmarSol(this)">✓ Confirmar y agendar</button>
-              <button class="btn btn-outline" onclick="abrirRespuesta(this)">✉ Responder</button>
-              <button class="btn btn-outline" style="margin-left:auto;color:#e57367;border-color:var(--red-dim)" onclick="rechazarSol(this)">✕ Rechazar</button>
-            </div>
-          </div>
-        </div>
-        <div class="solicitud-card nueva" data-estado="nueva">
-          <div class="sol-header" onclick="toggleSol(this)">
-            <div class="client-avatar" style="width:36px;height:36px;font-size:14px;flex-shrink:0">L</div>
-            <div style="flex:1"><div style="font-weight:600;font-size:14px">Lucas Herrera</div><div style="font-size:11px;color:var(--muted)">Geométrico / Blackwork · Pecho · Hace 5 horas</div></div>
-            <span class="tag tag-gold">Nueva</span><span style="color:var(--muted);font-size:18px;margin-left:8px">▾</span>
-          </div>
-          <div class="sol-body">
-            <div class="sol-grid">
-              <div class="sol-field"><label>Estilo</label><span>Geométrico / Blackwork</span></div>
-              <div class="sol-field"><label>Zona</label><span>Pecho central</span></div>
-              <div class="sol-field"><label>Tamaño</label><span>Grande (20+ cm)</span></div>
-              <div class="sol-field"><label>Color</label><span>Negro y grises</span></div>
-              <div class="sol-field"><label>Primera vez</label><span>No</span></div>
-              <div class="sol-field"><label>Disponibilidad</label><span>Fines de semana</span></div>
-            </div>
-            <div class="sol-field" style="margin-bottom:14px"><label>Descripción</label><span style="display:block;margin-top:5px;line-height:1.7;color:var(--text)">Mandala con figuras geométricas, tipo sacred geometry. Centro del pecho. Inspirado en dotwork con líneas muy finas.</span></div>
-            <div class="sol-actions">
-              <button class="btn btn-green" onclick="confirmarSol(this)">✓ Confirmar y agendar</button>
-              <button class="btn btn-outline" onclick="abrirRespuesta(this)">✉ Responder</button>
-              <button class="btn btn-outline" style="margin-left:auto;color:#e57367;border-color:var(--red-dim)" onclick="rechazarSol(this)">✕ Rechazar</button>
-            </div>
-          </div>
-        </div>
-        <div class="solicitud-card nueva" data-estado="nueva">
-          <div class="sol-header" onclick="toggleSol(this)">
-            <div class="client-avatar" style="width:36px;height:36px;font-size:14px;flex-shrink:0">S</div>
-            <div style="flex:1"><div style="font-weight:600;font-size:14px">Sol Márquez</div><div style="font-size:11px;color:var(--muted)">Fine line / Lettering · Muñeca · Ayer</div></div>
-            <span class="tag tag-gold">Nueva</span><span style="color:var(--muted);font-size:18px;margin-left:8px">▾</span>
-          </div>
-          <div class="sol-body">
-            <div class="sol-grid">
-              <div class="sol-field"><label>Estilo</label><span>Fine line / Lettering</span></div>
-              <div class="sol-field"><label>Zona</label><span>Muñeca interior</span></div>
-              <div class="sol-field"><label>Tamaño</label><span>Pequeño (hasta 5 cm)</span></div>
-            </div>
-            <div class="sol-field" style="margin-bottom:14px"><label>Descripción</label><span style="display:block;margin-top:5px;line-height:1.7;color:var(--text)">"per aspera ad astra" en letras cursivas, fino y elegante.</span></div>
-            <div class="sol-actions">
-              <button class="btn btn-green" onclick="confirmarSol(this)">✓ Confirmar y agendar</button>
-              <button class="btn btn-outline" onclick="abrirRespuesta(this)">✉ Responder</button>
-              <button class="btn btn-outline" style="margin-left:auto;color:#e57367;border-color:var(--red-dim)" onclick="rechazarSol(this)">✕ Rechazar</button>
-            </div>
-          </div>
-        </div>
-        <div class="solicitud-card nueva" data-estado="nueva">
-          <div class="sol-header" onclick="toggleSol(this)">
-            <div class="client-avatar" style="width:36px;height:36px;font-size:14px;flex-shrink:0">N</div>
-            <div style="flex:1"><div style="font-weight:600;font-size:14px">Nicolás Prado</div><div style="font-size:11px;color:var(--muted)">Neo-tradicional · Bicep · Hace 20h</div></div>
-            <span class="tag tag-gold">Nueva</span><span style="color:var(--muted);font-size:18px;margin-left:8px">▾</span>
-          </div>
-          <div class="sol-body">
-            <div class="sol-grid">
-              <div class="sol-field"><label>Estilo</label><span>Neo-tradicional</span></div>
-              <div class="sol-field"><label>Zona</label><span>Brazo — Bicep</span></div>
-              <div class="sol-field"><label>Tamaño</label><span>Mediano (10–15 cm)</span></div>
-            </div>
-            <div class="sol-field" style="margin-bottom:14px"><label>Descripción</label><span style="display:block;margin-top:5px;line-height:1.7;color:var(--text)">Lobo estilo neo-tradicional, colores vivos, con luna en el fondo. Adjuntó referencias en Instagram.</span></div>
-            <div class="sol-actions">
-              <button class="btn btn-green" onclick="confirmarSol(this)">✓ Confirmar y agendar</button>
-              <button class="btn btn-outline" onclick="abrirRespuesta(this)">✉ Responder</button>
-              <button class="btn btn-outline" style="margin-left:auto;color:#e57367;border-color:var(--red-dim)" onclick="rechazarSol(this)">✕ Rechazar</button>
-            </div>
-          </div>
-        </div>
-        <div class="solicitud-card vista" data-estado="vista">
-          <div class="sol-header" onclick="toggleSol(this)">
-            <div class="client-avatar" style="width:36px;height:36px;font-size:14px;flex-shrink:0">P</div>
-            <div style="flex:1"><div style="font-weight:600;font-size:14px">Paula Ríos</div><div style="font-size:11px;color:var(--muted)">Realismo · Espalda alta · Hace 2 días</div></div>
-            <span class="tag tag-blue">Vista</span><span style="color:var(--muted);font-size:18px;margin-left:8px">▾</span>
-          </div>
-          <div class="sol-body">
-            <div class="sol-grid">
-              <div class="sol-field"><label>Estilo</label><span>Realismo</span></div>
-              <div class="sol-field"><label>Zona</label><span>Espalda alta</span></div>
-              <div class="sol-field"><label>Tamaño</label><span>Grande (20+ cm)</span></div>
-            </div>
-            <div class="sol-actions">
-              <button class="btn btn-green" onclick="confirmarSol(this)">✓ Confirmar y agendar</button>
-              <button class="btn btn-outline" onclick="abrirRespuesta(this)">✉ Responder</button>
-              <button class="btn btn-outline" style="margin-left:auto;color:#e57367;border-color:var(--red-dim)" onclick="rechazarSol(this)">✕ Rechazar</button>
-            </div>
-          </div>
-        </div>
-        <div class="solicitud-card confirmada" data-estado="confirmada">
-          <div class="sol-header" onclick="toggleSol(this)">
-            <div class="client-avatar" style="width:36px;height:36px;font-size:14px;flex-shrink:0">M</div>
-            <div style="flex:1"><div style="font-weight:600;font-size:14px">Martina Suárez</div><div style="font-size:11px;color:var(--muted)">Fine line · Tobillo · <strong style="color:#5cb882">Agendado Vie 20/06 10:00</strong></div></div>
-            <span class="tag tag-green">Confirmada</span><span style="color:var(--muted);font-size:18px;margin-left:8px">▾</span>
-          </div>
-          <div class="sol-body">
-            <div class="sol-grid">
-              <div class="sol-field"><label>Estilo</label><span>Fine line / Minimalista</span></div>
-              <div class="sol-field"><label>Zona</label><span>Tobillo</span></div>
-              <div class="sol-field"><label>Turno confirmado</label><span style="color:#5cb882">Vie 20/06 — 10:00 — Laura V.</span></div>
-            </div>
-          </div>
-        </div>
+        <div style="padding:40px;text-align:center;color:var(--muted);font-size:13px">&#9679; Cargando solicitudes...</div>
       </div>
     </div>
 
@@ -1654,10 +1529,10 @@
 <div class="modal-overlay" id="modal-preview">
   <div class="modal" style="width:660px;max-width:95vw">
     <div class="modal-header"><span class="modal-title">PREVIEW — FORM DE CLIENTE</span><button class="modal-close" onclick="closeModal('modal-preview')">×</button></div>
-    <div style="padding:0"><div id="public-preview-wrap"><iframe id="preview-iframe" src="https://julian-kiodo-tattoo.vercel.app/tattoo-studio-booking.html"></iframe></div></div>
+    <div style="padding:0"><div id="public-preview-wrap"><iframe id="preview-iframe" src="https://julian-kiodo-tattoo.vercel.app/calendario.html"></iframe></div></div>
     <div class="modal-footer">
       <button class="btn btn-outline" onclick="closeModal('modal-preview')">Cerrar</button>
-      <button class="btn btn-gold" onclick="window.open('https://julian-kiodo-tattoo.vercel.app/tattoo-studio-booking.html','_blank')">Abrir en nueva pestaña ↗</button>
+      <button class="btn btn-gold" onclick="window.open('https://julian-kiodo-tattoo.vercel.app/calendario.html','_blank')">Abrir en nueva pestaña ↗</button>
     </div>
   </div>
 </div>
@@ -1943,7 +1818,7 @@
     setTimeout(()=>btn.textContent='📋 Copiar',2000);
   }
   function abrirFormPublico() {
-    const w=window.open('tattoo-studio-booking.html','_blank');
+    const w=window.open('calendario.html','_blank');
   }
 
   const appointments = {
@@ -2021,6 +1896,147 @@
     renderCalendar();
   }
 
+
+
+  /* ── SUPABASE CONFIG ── */
+  const SUPA_URL = 'https://vstssczpkyvwuykcyxoh.supabase.co';
+  const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZzdHNzY3pwa3l2d3V5a2N5eG9oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE0NzA2MDUsImV4cCI6MjA5NzA0NjYwNX0.vnaZN9TmCJjncp9FN6hsgi6v3fe87j3hNiEQmz86PPA';
+
+  async function supaFetch(path, options={}) {
+    const res = await fetch(SUPA_URL + path, {
+      ...options,
+      headers: {
+        'apikey': SUPA_KEY,
+        'Authorization': 'Bearer ' + SUPA_KEY,
+        'Content-Type': 'application/json',
+        ...(options.headers||{})
+      }
+    });
+    if (!res.ok) throw new Error('Supabase error ' + res.status);
+    return res.json().catch(()=>({}));
+  }
+
+  /* ── CARGAR SOLICITUDES ── */
+  async function cargarSolicitudes() {
+    const list = document.getElementById('solicitudes-list');
+    try {
+      const data = await supaFetch('/rest/v1/solicitudes?select=*&order=created_at.desc');
+      if (!data.length) {
+        list.innerHTML = '<div style="padding:40px;text-align:center;color:var(--muted);font-size:13px">No hay solicitudes aún.</div>';
+        return;
+      }
+      list.innerHTML = '';
+      // update badge
+      const nuevas = data.filter(s => s.estado === 'nueva').length;
+      const badge = document.getElementById('badge-sol');
+      if (badge) badge.textContent = nuevas;
+      data.forEach(s => list.appendChild(buildSolCard(s)));
+    } catch(err) {
+      list.innerHTML = '<div style="padding:40px;text-align:center;color:var(--muted)">Error al cargar solicitudes.</div>';
+      console.error(err);
+    }
+  }
+
+  function timeAgo(dateStr) {
+    const diff = Date.now() - new Date(dateStr).getTime();
+    const m = Math.floor(diff/60000);
+    if (m < 60) return 'Hace ' + m + ' min';
+    const h = Math.floor(m/60);
+    if (h < 24) return 'Hace ' + h + 'h';
+    return 'Hace ' + Math.floor(h/24) + ' días';
+  }
+
+  function buildSolCard(s) {
+    const estados = {
+      nueva: { cls: 'nueva', tag: 'tag-gold', label: 'Nueva' },
+      vista: { cls: 'vista', tag: 'tag-blue', label: 'Vista' },
+      confirmada: { cls: 'confirmada', tag: 'tag-green', label: 'Confirmada' },
+      rechazada: { cls: 'rechazada', tag: 'tag-muted', label: 'Rechazada' }
+    };
+    const est = estados[s.estado] || estados.nueva;
+    const inicial = (s.nombre||'?')[0].toUpperCase();
+    const card = document.createElement('div');
+    card.className = 'solicitud-card ' + est.cls;
+    card.dataset.estado = s.estado;
+    card.dataset.id = s.id;
+    card.innerHTML = `
+      <div class="sol-header" onclick="toggleSol(this)">
+        <div class="client-avatar" style="width:36px;height:36px;font-size:14px;flex-shrink:0">${inicial}</div>
+        <div style="flex:1">
+          <div style="font-weight:600;font-size:14px">${s.nombre||''} ${s.apellido||''}</div>
+          <div style="font-size:11px;color:var(--muted)">${s.estilo||'—'} · ${s.zona||'—'} · ${timeAgo(s.created_at)}</div>
+        </div>
+        <span class="tag ${est.tag}">${est.label}</span>
+        <span style="color:var(--muted);font-size:18px;margin-left:8px">▾</span>
+      </div>
+      <div class="sol-body">
+        <div class="sol-grid">
+          <div class="sol-field"><label>Nombre</label><span>${s.nombre||'—'} ${s.apellido||''}</span></div>
+          <div class="sol-field"><label>Teléfono</label><span>${s.telefono||'—'}</span></div>
+          <div class="sol-field"><label>Email</label><span>${s.email||'—'}</span></div>
+          <div class="sol-field"><label>Estilo</label><span>${s.estilo||'—'}</span></div>
+          <div class="sol-field"><label>Zona</label><span>${s.zona||'—'}</span></div>
+          <div class="sol-field"><label>Tamaño</label><span>${s.tamano||'—'}</span></div>
+          <div class="sol-field"><label>Color</label><span>${s.color||'—'}</span></div>
+          <div class="sol-field"><label>Fecha solicitada</label><span>${s.fecha_solicitada||'—'}</span></div>
+          <div class="sol-field"><label>Horario</label><span>${s.hora_solicitada||'—'}</span></div>
+        </div>
+        <div class="sol-field" style="margin-bottom:14px">
+          <label>Descripción</label>
+          <span style="display:block;margin-top:5px;line-height:1.7;color:var(--text)">${s.descripcion||'Sin descripción'}</span>
+        </div>
+        <div class="sol-actions">
+          <button class="btn btn-green" onclick="confirmarSolDB(this)">✓ Confirmar y agendar</button>
+          <button class="btn btn-outline" onclick="abrirRespuesta(this)">✉ Responder</button>
+          <button class="btn btn-outline" style="margin-left:auto;color:#e57367;border-color:var(--red-dim)" onclick="rechazarSolDB(this)">✕ Rechazar</button>
+        </div>
+      </div>`;
+    return card;
+  }
+
+  async function actualizarEstado(id, estado) {
+    await supaFetch('/rest/v1/solicitudes?id=eq.' + id, {
+      method: 'PATCH',
+      headers: { 'Prefer': 'return=minimal' },
+      body: JSON.stringify({ estado })
+    });
+  }
+
+  async function confirmarSolDB(btn) {
+    currentSolCard = btn.closest('.solicitud-card');
+    const nombre = currentSolCard.querySelector('.sol-header div:nth-child(2) div:first-child')?.textContent || 'Cliente';
+    document.getElementById('conf-cliente').value = nombre.trim();
+    const tom = new Date(); tom.setDate(tom.getDate()+1);
+    document.getElementById('conf-fecha').value = tom.toISOString().split('T')[0];
+    document.getElementById('conf-hora').value = '10:00';
+    openModal('modal-confirmar-sol');
+  }
+
+  async function rechazarSolDB(btn) {
+    const card = btn.closest('.solicitud-card');
+    const id = card.dataset.id;
+    rechazarSol(btn);
+    if (id) await actualizarEstado(id, 'rechazada').catch(console.error);
+  }
+
+  // Override finalizarConfirmacion to also update DB
+  const _finalizarOrig = finalizarConfirmacion;
+  async function finalizarConfirmacion() {
+    _finalizarOrig();
+    const id = currentSolCard?.dataset?.id;
+    if (id) await actualizarEstado(id, 'confirmada').catch(console.error);
+  }
+
+  // Auto-reload every 30 seconds
+  cargarSolicitudes();
+  setInterval(cargarSolicitudes, 30000);
+
+  // Reload when switching to solicitudes panel
+  const _showPanelOrig = showPanel;
+  function showPanel(name) {
+    _showPanelOrig(name);
+    if (name === 'solicitudes') cargarSolicitudes();
+  }
 
 </script>
 </body>
