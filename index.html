@@ -1740,6 +1740,7 @@
     document.getElementById('topbar-title').textContent = panels[name].title;
     document.getElementById('topbar-sub').textContent   = panels[name].sub;
     if (name === 'calendario') renderCalendar();
+    if (name === 'solicitudes') cargarSolicitudes();
   }
 
   /* ── MODALS ── */
@@ -1777,7 +1778,7 @@
     document.getElementById('conf-hora').value = '10:00';
     openModal('modal-confirmar-sol');
   }
-  function finalizarConfirmacion() {
+  async function finalizarConfirmacion() {
     if (currentSolCard) {
       currentSolCard.className = 'solicitud-card confirmada';
       currentSolCard.dataset.estado = 'confirmada';
@@ -1793,6 +1794,8 @@
       const nc = document.querySelectorAll('.solicitud-card.nueva').length;
       const badge = document.getElementById('badge-sol');
       if(badge) badge.textContent = nc;
+      const id = currentSolCard.dataset.id;
+      if (id) await actualizarEstado(id, 'confirmada').catch(console.error);
     }
     closeModal('modal-confirmar-sol');
   }
@@ -2019,24 +2022,11 @@
     if (id) await actualizarEstado(id, 'rechazada').catch(console.error);
   }
 
-  // Override finalizarConfirmacion to also update DB
-  const _finalizarOrig = finalizarConfirmacion;
-  async function finalizarConfirmacion() {
-    _finalizarOrig();
-    const id = currentSolCard?.dataset?.id;
-    if (id) await actualizarEstado(id, 'confirmada').catch(console.error);
-  }
-
   // Auto-reload every 30 seconds
   cargarSolicitudes();
   setInterval(cargarSolicitudes, 30000);
 
-  // Reload when switching to solicitudes panel
-  const _showPanelOrig = showPanel;
-  function showPanel(name) {
-    _showPanelOrig(name);
-    if (name === 'solicitudes') cargarSolicitudes();
-  }
+
 
 </script>
 </body>
